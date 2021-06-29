@@ -14,7 +14,7 @@ app = Flask(__name__, static_folder='hrfrontend/build', static_url_path='/')
 
 @app.route('/', methods=['GET'])
 def hello():
-    return jsonify({"response":"This is Sentiment Application"})
+    return ("hello")
 
 @app.route('/hrformsubmit/', methods=['GET', 'POST'])
 @cross_origin(supports_credentials=True)
