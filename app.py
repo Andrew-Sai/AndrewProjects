@@ -5,7 +5,7 @@ import joblib
 from flask_cors import CORS, cross_origin #comment this on deployment
 
 
-app = Flask(__name__, static_folder='/hrfrontend/build', static_url_path='/')
+app = Flask(__name__, static_folder='hrfrontend/build', static_url_path='/')
 #CORS(app, support_credentials=True)
 #app.config['CORS_HEADERS'] = 'Content-Type'
 ##@app.route('/')
