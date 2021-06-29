@@ -5,7 +5,7 @@ import joblib
 from flask_cors import CORS, cross_origin #comment this on deployment
 
 
-app = Flask(__name__, static_folder='hrfrontend/build', static_url_path='/')
+app = Flask(__name__, static_folder='hrfrontend/build', static_url_path='/',  template_folder="hrfrontend/build")
 #CORS(app, support_credentials=True)
 #app.config['CORS_HEADERS'] = 'Content-Type'
 ##@app.route('/')
@@ -14,11 +14,11 @@ app = Flask(__name__, static_folder='hrfrontend/build', static_url_path='/')
 
 @app.route('/')
 def index():
-    return app.send_static_file('index.html')
+    return render_template('index.html')
 
 @app.error_handler(404)
 def not_found(e):
-    return app.send_static_file('index.html')
+    return ("failed")
 
 @app.route('/hrformsubmit/', methods=['GET', 'POST'])
 @cross_origin(supports_credentials=True)
