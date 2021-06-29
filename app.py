@@ -12,6 +12,10 @@ app = Flask(__name__, static_folder='hrfrontend/build', static_url_path='/')
 ##def index():
 ##    return render_template('index.html')
 
+@app.route('/', methods=['GET'])
+def hello():
+    return jsonify({"response":"This is Sentiment Application"})
+
 @app.route('/hrformsubmit/', methods=['GET', 'POST'])
 @cross_origin(supports_credentials=True)
 def hrFormPredict():
