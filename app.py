@@ -12,8 +12,12 @@ app = Flask(__name__, static_folder='hrfrontend/build', static_url_path='/')
 ##def index():
 ##    return render_template('index.html')
 
-app.route('/')
+@app.route('/')
 def index():
+    return app.send_static_file('index.html')
+
+@app.error_handler(404)
+def not_found(e):
     return app.send_static_file('index.html')
 
 @app.route('/hrformsubmit/', methods=['GET', 'POST'])
