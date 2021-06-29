@@ -16,10 +16,6 @@ app = Flask(__name__, static_folder='hrfrontend/build', static_url_path='/',  te
 def index():
     return render_template('index.html')
 
-@app.error_handler(404)
-def not_found(e):
-    return ("failed")
-
 @app.route('/hrformsubmit/', methods=['GET', 'POST'])
 @cross_origin(supports_credentials=True)
 def hrFormPredict():
