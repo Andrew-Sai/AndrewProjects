@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HR Test</title>
+    </head>
+    <body>
+        <h1 class="text-center"> HR Left </h1>
+        <form action='/predict/', method="post">
+            <label for="sLevel">Satisfaction Level</label><br>
+            <input type="text" id="sLevel" name="sLevel"><br>
+            <label for="lastEval">Last Evaluation</label><br>
+            <input type="text" id="lastEval" name="lastEval"><br>
+            <label for="noProj">Number Project</label><br>
+            <select id="noProj" name="noProj">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select><br>
+            <label for="avgMthHours">Average Monthly Working Hours</label><br>
+            <input type="text" id="avgMthHours" name="avgMthHours"><br>
+            <label for="totalTimeSpent">Total time in the company</label><br>
+            <select id="totalTimeSpent" name="totalTimeSpent"><br>
+                <option value = "2">2</option>
+                <option value = "3">3</option>
+                <option value = "4">4</option>
+                <option value = "5">5</option>
+                <option value = "6">6+</option>
+            </select><br>
+            <label for="workAccident">Did a work accident occur?</label><br>
+            <input type="hidden"  id="workAccident" name="workAccident" value="0" />
+            <input type="checkbox"  id="workAccident" name="workAccident" value="1" /><br>
+            <label for="promo5years">Did they get a promotion in the last 5 years?</label><br>
+            <input type="hidden"  id="promo5years" name="promo5years" value="0" />
+            <input type="checkbox"  id="promo5years" name="promo5years" value="1" /><br>
+            <label for="Department">What Department are they in?</label><br>
+            <select id="Department" name="Department"><br>
+                <option value="sales">sales</option>
+                <option value="accounting">accounting</option>
+                <option value="hr">hr</option>
+                <option value="technical">technical</option>
+                <option value="support">support</option>
+                <option value="management">management</option>
+                <option value="IT">IT</option>
+                <option value="product_mng">Production Management</option>
+                <option value="marketing">marketing</option>
+                <option value="RandD">R&D</option>
+            </select><br>
+            <label for="Salary">What range is their salary?</label><br>
+            <select id="Salary" name="Salary"><br>
+                <option value="low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select><br>
+            <br>
+            <input type="submit" value="Predict Leaving">
+        </form>
+    </body>
+</html>
