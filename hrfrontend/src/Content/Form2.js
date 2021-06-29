@@ -17,8 +17,6 @@ import Avatar from '@material-ui/core/Avatar';
 import axios from "axios"; 
 import Modal from '@material-ui/core/Modal'
 
-
-
 const useStyles = makeStyles((theme) => ({
     paper: {
       marginTop: theme.spacing(3),
@@ -72,7 +70,7 @@ export default function HrForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://127.0.0.1:3000/hrformsubmit/', {
+        axios.post('https://andrewprojects.herokuapp.com/hrformsubmit/', {
             sLevel: sLevel,
             lastEval: lastEval,
             avgMthHours: avgMthHours,
