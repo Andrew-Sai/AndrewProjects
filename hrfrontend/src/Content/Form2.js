@@ -71,7 +71,7 @@ export default function HrForm() {
     const handleSubmit = (event) => {
         setResponseData('')
         event.preventDefault();
-        axios.post('https://andrewprojects.herokuapp.com/hrformsubmit/', {
+        axios.post('http://www.andrewsai.me/hrformsubmit/', {
             sLevel: sLevel,
             lastEval: lastEval,
             avgMthHours: avgMthHours,
