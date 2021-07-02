@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Form2 from "./Content/Form2.js";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Form2 />
-  </React.StrictMode>,
+  <Router>
+    <App />
+  </Router>,
   document.getElementById('root')
 );
 

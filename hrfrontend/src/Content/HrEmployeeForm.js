@@ -15,7 +15,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import PersonIcon from '@material-ui/icons/Person';
 import Avatar from '@material-ui/core/Avatar';
 import axios from "axios"; 
-import Modal from '@material-ui/core/Modal'
+import NavbarTemplate from './Navbar.js';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: theme.palette.secondary.main,
     },
     form: {
-      width: '100%', // Fix IE 11 issue.
+      width: '100%',
       marginTop: theme.spacing(3),
     },
     submit: {
@@ -71,7 +71,7 @@ export default function HrForm() {
     const handleSubmit = (event) => {
         setResponseData('')
         event.preventDefault();
-        axios.post('http://www.andrewsai.me/hrformsubmit/', {
+        axios.post('https://www.andrewsai.me/hrformsubmit/', {
             sLevel: sLevel,
             lastEval: lastEval,
             avgMthHours: avgMthHours,
@@ -125,7 +125,9 @@ export default function HrForm() {
     };
 
     return (
-        <Container component="main" maxWidth="sm">
+        <div>
+            <NavbarTemplate />
+            <Container maxWidth="sm">
             <div className={classes.paper}>
                 <Card variant="outlined">
                     <div className={classes.formtop}>
@@ -353,6 +355,7 @@ export default function HrForm() {
                     </div>
                 </Card>
             </div>
-        </Container>
+            </Container>
+        </div>
     )
 }
