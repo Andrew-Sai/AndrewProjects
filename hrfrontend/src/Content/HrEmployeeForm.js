@@ -71,7 +71,7 @@ export default function HrForm() {
     const handleSubmit = (event) => {
         setResponseData('')
         event.preventDefault();
-        axios.post('https://www.andrewsai.me/hrformsubmit/', {
+        axios.post('http://flaskpractice-env.eba-ijgxukyk.ap-southeast-2.elasticbeanstalk.com/', {
             sLevel: sLevel,
             lastEval: lastEval,
             avgMthHours: avgMthHours,
