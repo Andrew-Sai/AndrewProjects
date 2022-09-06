@@ -114,7 +114,7 @@ export default function Contact() {
                                             </Typography>
                                         </Grid>
                                         <Grid item>
-                                            AndrewSai.me
+                                            AndrewSai.com
                                         </Grid>
                                     </Grid>
 

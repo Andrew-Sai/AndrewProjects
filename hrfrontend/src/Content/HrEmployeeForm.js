@@ -72,7 +72,7 @@ export default function HrForm() {
         setResponseData('')
         event.preventDefault();
         console.log('here')
-        axios.post('https://www.andrewsai.com/hrformsubmit/', {
+        axios.post('https://www.andrewsai.com//hrformsubmit/', {
             sLevel: sLevel,
             lastEval: lastEval,
             avgMthHours: avgMthHours,
