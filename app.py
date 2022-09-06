@@ -1,9 +1,11 @@
+from email.mime import application
 from flask import Flask, render_template, request
 import pandas as pd
 import numpy as np
 import joblib
 from flask_cors import CORS, cross_origin #comment this on deployment
 
+app = application
 
 app = Flask(__name__, static_folder='hrfrontend/build', static_url_path='/',  template_folder="hrfrontend/build")
 #CORS(app, support_credentials=True)
